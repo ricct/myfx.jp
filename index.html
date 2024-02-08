@@ -1,5 +1,615 @@
-<html>
-<body>
-myfx.jp
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>MyFX - データから見る未来、MyFXでトレードを進化させよう</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@300&display=swap" rel="stylesheet">
+
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" type="text/javascript"></script>
+
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <style type="text/css">
+  
+  
+#slideshow {
+   position: relative;
+   width:  640px; /* 画像の横幅に合わせて記述 */
+   height: 270px; /* 画像の高さに合わせて記述 */
+}
+#slideshow img {
+   position: absolute;
+   top: 0;
+   left:0;
+   z-index: 8;
+   opacity: 0.0;
+}
+#slideshow img.active {
+   z-index: 10;
+   opacity: 1.0;
+}
+#slideshow img.last-active {
+   z-index: 9;
+}
+</style>
+<script type="text/javascript">
+//http://jonraasch.com/blog/a-simple-jquery-slideshow
+function slideSwitch() {
+    var $active = $('#slideshow IMG.active');
+    if ( $active.length == 0 ) $active = $('#slideshow IMG:last');
+    var $next =  $active.next().length ? $active.next()
+        : $('#slideshow IMG:first');
+    $active.addClass('last-active');
+        
+    $next.css({opacity: 0.0})
+        .addClass('active')
+        .animate({opacity: 1.0}, 1000, function() {
+            $active.removeClass('active last-active');
+        });
+}
+$(function() {
+    setInterval( "slideSwitch()", 5000 );
+});
+</script>
+
+</head>
+
+<body onLoad="slideSwitch()">
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo.png" alt="">
+        <span>MyFX.jp</span>
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">ホーム</a></li>
+          <li><a class="nav-link scrollto" href="#about">MyFXについて</a></li>
+          <li><a class="nav-link scrollto" href="#features">機能</a></li>
+          <li><a class="nav-link scrollto" href="#pricing">価格</a></li>
+          <li><a class="nav-link scrollto" href="#faq">FAQ</a></li>
+          <!--<li><a class="getstarted scrollto" href="#about">Get Started</a></li>-->
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero d-flex align-items-center">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center">
+          <h1 data-aos="fade-up">データから見る未来、MyFXでトレードを進化させよう。</h1>
+          <h2 data-aos="fade-up" data-aos-delay="400">MyFXは、あなたのFX取引を新しい次元に引き上げるためのオールインワンWEBサービスです。取引実績データをわかりやすく視覚的に表示し、トレードの洞察を一層深めるとともに、革新的なFXシミュレーションとバックテストツールを提供して、より戦略的なトレードが可能となります。</h2>
+          <div data-aos="fade-up" data-aos-delay="600">
+            <div class="text-center text-lg-start">
+            <!--
+              <a href="./dashboard.html" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+                <span>Get Started</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+              -->
+            </div>
+          </div>
+        </div>
+        <div id="slideshow" class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="20">
+          <img src="assets/img/home-img1.png" class="img-fluid" alt="">
+          <img src="assets/img/home-img3.png" class="img-fluid" alt="">
+          <img src="assets/img/home-img2.png" class="img-fluid" alt="">
+          <img src="assets/img/home-img4.png" class="img-fluid" alt="">
+          <img src="assets/img/home-img5.png" class="img-fluid" alt="">
+        </div>
+
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+
+  <main id="main">
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+
+      <div class="container" data-aos="fade-up">
+              <header class="section-header">
+          <h3>About</h3>
+          <p>MyFXについて</p>
+        </header>
+        
+        <div class="row gx-0">
+
+          <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="content">
+              <h2>取引実績データを一元管理</h2>
+              <p>
+                MyFXは、複数の証券会社の取引実績データを一元管理し、分散された情報をシームレスに統合し、ユーザーフレンドリーなダッシュボードに表示します。
+              </p>
+               <h2>多彩なツールを駆使して戦略を確立</h2>
+              <p>
+                未来のFX取引に備え、証拠金シミュレーションとバックテスト機能を提供し、トレーダーに確かな戦略を築く手助けを致します。リスクを最小限に抑えて戦略を洗練しましょう。
+              </p>
+              <h2>堅固なセキュリティ対策</h2>
+              <p>
+                MyFXは最高水準の暗号化技術を使用し、ユーザーデータを徹底的に保護します。利用者が個人情報を提供せずに匿名でサービスを利用できます。
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
+            <img src="assets/img/about.jpg" class="img-fluid" alt="">
+          </div>
+
+        </div>
+      </div>
+
+    </section><!-- End About Section -->
+
+   
+    <!-- ======= Features Section ======= -->
+    <section id="features" class="features">
+
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h2>Features</h2>
+          <p>主要機能</p>
+        </header>
+
+
+
+        <!-- Feature Icons -->
+        <div class="row feature-icons" data-aos="fade-up">
+          <h3><i class="bi bi-clipboard2-data"></i>&nbsp;ユーザーフレンドリーな多機能ダッシュボード</h3>
+
+          <div class="row">
+
+            <div class="col-xl-8 text-center" data-aos="fade-right" data-aos-delay="100">
+              <img src="assets/img/feature1.png" class="img-fluid p-4" alt="">
+            </div>
+
+            <div class="col-xl-4 d-flex content">
+              <div class="row align-self-center gy-4">
+
+                <div class="col-md-12 icon-box" data-aos="fade-up">
+                  <i class="ri-line-chart-line"></i>
+                  <div>
+                    <h4>タイムフレームごとのチャート機能</h4>
+                    <p>年次、四半期、月別、週次、日単位の取引データを可視化でき、トレーダーに詳細なデータ分析と戦略の最適化を可能にします。</p>
+                  </div>
+                </div>
+                <div class="col-md-12 icon-box" data-aos="fade-up" data-aos-delay="200">
+                  <i class="bi bi-buildings"></i>
+                  <div>
+                    <h4>複数証券会社対応</h4>
+                    <p>複数証券会社からの取引データを統合。一つのダッシュボードで複数のデータを管理し、直感的に比較できます。</p>
+                  </div>
+                </div>
+
+                <div class="col-md-12 icon-box" data-aos="fade-up" data-aos-delay="300">
+                  <i class="bi bi-currency-exchange"></i>
+                  <div>
+                    <h4>通貨単位での深いデータ分析</h4>
+                    <p>各通貨の個別の取引データを一元的に管理し、比較分析が容易です。通貨ペアごとの動向把握や通貨別のパフォーマンス比較に役立ちます。</p>
+                  </div>
+                </div>
+                <div class="col-md-12 icon-box" data-aos="fade-up" data-aos-delay="100">
+                  <i class="bi bi-calendar3"></i>
+                  <div>
+                    <h4>取引の実績データカレンダーで確認</h4>
+                    <p>カレンダー上でトレード実績が視覚的に表示され、成績の進捗や変動が一目でわかり、取引データを見やすく整理します。</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+        </div><!-- End Feature Icons -->
+        
+
+  <!-- Feature Icons -->
+        <div class="row feature-icons" data-aos="fade-up" style="margin-top: 80px;">
+          <h3><i class="bi bi-calculator"></i>&nbsp;自動売買証拠金シミュレーション</h3>
+          <div class="row">
+
+            <div class="col-xl-6 d-flex content">
+              <div class="row align-self-center gy-4">
+
+                <div class="col-md-12 icon-box" data-aos="fade-up">
+                  <i class="bi bi-cash-coin"></i>
+                  <div>
+                    <h4>証拠金シミュレーションツールでリスクコントロール</h4>
+                    <p>複数のFX会社、複数通貨、複数注文に対応したトータル証拠金のシミュレーション機能を提供し、トレーダーに確かなリスクコントロール手段を提供しています。</p>
+                  </div>
+                </div>
+
+                <div class="col-md-12 icon-box" data-aos="fade-up" data-aos-delay="100">
+                  <i class="bi bi-list-check"></i>
+                  <div>
+                    <h4>複数注文のシナリオ検証</h4>
+                    <p>複数の注文を同時にシミュレーションして、異なる取引戦略の組み合わせを検証。ポジション管理や利益リスクのバランスを詳細に検証できます。</p>
+                  </div>
+                </div>
+
+                <div class="col-md-12 icon-box" data-aos="fade-up" data-aos-delay="200">
+                  <i class="bi bi-clipboard2-pulse-fill"></i>
+                  <div>
+                    <h4>リスクコントロール</h4>
+                    <p>トレードにおける最大損失やリスクリワード比率を設定。計画的で合理的な取引をサポートします。</p>
+                  </div>
+                </div>
+
+                <div class="col-md-12 icon-box" data-aos="fade-up" data-aos-delay="300">
+                  <i class="bi bi-calculator-fill"></i>
+                  <div>
+                    <h4>実践的なシミュレーション</h4>
+                    <p>実際の取引状況に近い条件でシミュレーションを行い、リアルなトレード経験を得ることができます。未来の取引に備え、戦略の微調整を行いましょう。</p>
+                  </div>
+                </div>
+            </div>
+            </div>
+            <div class="col-xl-6 text-center" data-aos="fade-right" data-aos-delay="100">
+                <img src="assets/img/feature2.png" class="img-fluid p-4" alt="">
+            </div>
+          </div>
+
+        </div><!-- End Feature Icons -->
+        
+        
+        
+        <!-- Feature Icons -->
+        <div class="row feature-icons" data-aos="fade-up" style="margin-top: 80px;">
+          <h3><i class="bi bi-clock-history"></i>&nbsp;バックテスト機能で戦略を評価</h3>
+
+          <div class="row">
+
+            <div class="col-xl-8 text-center" data-aos="fade-right" data-aos-delay="100">
+              <img src="assets/img/feature1.png" class="img-fluid p-4" alt="">
+            </div>
+
+            <div class="col-xl-4 d-flex content">
+              <div class="row align-self-center gy-4">
+
+                <div class="col-md-12 icon-box" data-aos="fade-up">
+                  <i class="bi bi-activity"></i>
+                  <div>
+                    <h4>過去のデータでの戦略評価</h4>
+                    <p>バックテスト機能は、過去の市場データを使用してトレード戦略を評価。異なる時期や市場状況での戦略をシミュレートし、効果的な結果を確認できます。</p>
+                  </div>
+                </div>
+
+                <div class="col-md-12 icon-box" data-aos="fade-up" data-aos-delay="100">
+                  <i class="bi bi-gear-wide-connected"></i>
+                  <div>
+                    <h4>戦略の改善と洗練</h4>
+                    <p>バックテスト結果を分析し、戦略の改善点を見つけましょう。リアルタイムでは難しい状況でも、冷静に戦略を洗練させることが可能です。</p>
+                  </div>
+                </div>
+
+                <div class="col-md-12 icon-box" data-aos="fade-up" data-aos-delay="200">
+                  <i class="bi bi-card-checklist"></i>
+                  <div>
+                    <h4>異なるパラメータのテスト</h4>
+                    <p>異なる取引パラメータや戦略の変更に対する影響をテスト。最適な設定を見つけ、トレードの柔軟性を向上させます。</p>
+                  </div>
+                </div>
+
+                <div class="col-md-12 icon-box" data-aos="fade-up" data-aos-delay="300">
+                  <i class="bi bi-clipboard2-data"></i>
+                  <div>
+                    <h4>リスクとリターンの分析</h4>
+                    <p>バックテストにより、リスクとリターンのバランスを詳細に分析。損失の最小化と利益の最大化に向けて、トレード戦略を最適化する手助けとなります。</p>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+
+          </div>
+
+        </div><!-- End Feature Icons -->
+        
+      </div>
+
+    </section><!-- End Features Section -->
+
+
+    <!-- ======= Pricing Section ======= -->
+    <section id="pricing" class="pricing">
+
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h2>Pricing</h2>
+          <p>サービス価格</p>
+        </header>
+
+        <div class="row gy-4" data-aos="fade-left">
+
+          <div class="col-lg-4 col-md-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="box">
+              <h3 style="color: #07d5c0;">Standard Plan</h3>
+              <div class="price"><sup>￥</sup>0</div>
+              <img src="assets/img/pricing-free.png" class="img-fluid" alt="">
+              <ul>
+                <li>データダッシュボード</li>
+                <li>約定履歴カレンダー</li>
+                <li>自動売買証拠金シミュレーション</li>
+                <li>バックテスト</li>
+                <li class="na">複数証券会社対応</li>
+                <li>最大一年の過去データ保存</li>
+                <li>試算回数制限される可能性がある</li>
+              </ul>
+            </div>
+          </div>
+
+
+          <div class="col-lg-4 col-md-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="box">
+              <span class="featured">Coming soon</span>
+              <h3 style="color: #ff901c;">Professional Plan</h3>
+              <div class="price"><sup>￥</sup>480<span> / 月</span></div>
+              <img src="assets/img/pricing-business.png" class="img-fluid" alt="">
+              <ul>
+                <li>データダッシュボード</li>
+                <li>約定履歴カレンダー</li>
+                <li>自動売買証拠金シミュレーション</li>
+                <li>バックテスト</li>
+                <li>複数証券会社対応</li>
+                <li>データ保存期間無制限</li>
+                <li>各種試算回数無制限</li>
+              </ul>
+            </div>
+          </div>
+
+       
+          <div class="col-lg-4 col-md-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="box">
+              <span class="featured">Coming soon</span>
+              <h3 style="color: #ff0071;">Partner Plan</h3>
+              <div class="price"><sup>要相談</sup><span></span></div>
+              <img src="assets/img/pricing-ultimate.png" class="img-fluid" alt="">
+              <ul>
+                <li>自社データセンター稼働</li>
+                <li>指定クラウド環境稼働</li>
+                <li>専有環境の利用</li>
+                <li>機能カスタマイズ</li>
+                <li>LOGO変更、OEM提供</li>
+                <li>　</li>
+                <li>　</li>
+              </ul>
+            </div>
+          </div>  
+
+        </div>
+
+      </div>
+
+    </section><!-- End Pricing Section -->
+
+    <!-- ======= F.A.Q Section ======= -->
+    <section id="faq" class="faq">
+
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h2>F.A.Q</h2>
+          <p>よくある質問</p>
+        </header>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <!-- F.A.Q List 1-->
+            <div class="accordion accordion-flush" id="faqlist1">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-1">
+                    MyFXの新規利用方法は？
+                  </button>
+                </h2>
+                <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
+                  <div class="accordion-body">
+                      "MyFX Dashboard"ログインページには、ソーシャルアカウントでの登録オプションが用意されています。【Googleでサインイン】をクリックして進んでください。
+                  </div>
+                </div>
+              </div>
+
+<!--
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-3">
+                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi?
+                  </button>
+                </h2>
+                <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
+                  <div class="accordion-body">
+                    Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+                  </div>
+                </div>
+              </div>
+-->
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+
+            <!-- F.A.Q List 2-->
+            <div class="accordion accordion-flush" id="faqlist2">
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-content-1">
+                   約定履歴データを取り込む方法は？
+                  </button>
+                </h2>
+                <div id="faq2-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
+                  <div class="accordion-body">
+                    各証券会社のシステムからダウンロードしたCSVファイルを、「データメンテ」→「約定履歴取込」画面から取り込んでください。
+                  </div>
+                </div>
+              </div>
+
+<!--
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-content-2">
+                    Tempus quam pellentesque nec nam aliquam sem et tortor consequat?
+                  </button>
+                </h2>
+                <div id="faq2-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
+                  <div class="accordion-body">
+                    Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
+                  </div>
+                </div>
+              </div>
+-->
+
+             
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- End F.A.Q Section -->
+    
+    
+        <!-- ======= Clients Section ======= -->
+    <section id="clients" class="clients">
+
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h2>Securities</h2>
+          <p>対応証券会社</p>
+        </header>
+
+        <div class="clients-slider swiper">
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><img src="assets/img/clients/client-1.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+
+    </section><!-- End Clients Section -->
+    
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-5 col-md-12 footer-info">
+            <a href="index.html" class="logo d-flex align-items-center">
+              <img src="assets/img/logo.png" alt="">
+              <span>MyFX.jp</span>
+            </a>
+            <p>Developed by:<a href="https://www.ricct.com/">クラウドテクノロジーラボ</a></p>
+            <p>運営：株式会社データマックス</p>
+            <div class="social-links mt-3">
+              <a href="https://twitter.com/InstituteCloud" class="twitter"><i class="bi bi-twitter"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="#hero">ホーム</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#about">MyFXについて</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#features">機能</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#pricing">価格</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#faq">FAQ</a></li>
+            </ul>
+          </div>
+
+
+          <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+            <h4>Contact Us</h4>
+            <p>
+              〒164-0012<br>
+              東京都中野区本町6-12-11<br>
+              石川ビル3階<br><br>
+              <strong>Phone:</strong><img src="assets/img/ttt.png" height="30" /><br>
+              <strong>Email:</strong><img src="assets/img/eee.png" height="30" /><br>
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>MyFX.jp</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/flexstart-bootstrap-startup-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
 </body>
+
 </html>
