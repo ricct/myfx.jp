@@ -2420,5 +2420,7 @@ section {
   padding-top: 10px;
   text-align: center;
   font-size: 13px;
-  color: #012970;
+  color: #f6f9ff;
 }
+
+.footer .credits a {color: #f6f9ff; } 
