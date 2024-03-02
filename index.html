@@ -78,12 +78,12 @@ function slideSwitch() {
         
     $next.css({opacity: 0.0})
         .addClass('active')
-        .animate({opacity: 1.0}, 1000, function() {
+        .animate({opacity: 1.0}, 800, function() {
             $active.removeClass('active last-active');
         });
 }
 $(function() {
-    setInterval( "slideSwitch()", 5000 );
+    setInterval( "slideSwitch()", 4800 );
 });
 </script>
 
@@ -137,10 +137,12 @@ $(function() {
         </div>
         <div id="slideshow" class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="20">
           <img src="assets/img/home-img1.png" class="img-fluid" alt="">
+          <img src="assets/img/home-img5.png" class="img-fluid" alt="">
+          <img src="assets/img/home-img6.png" class="img-fluid" alt="">
           <img src="assets/img/home-img3.png" class="img-fluid" alt="">
           <img src="assets/img/home-img2.png" class="img-fluid" alt="">
           <img src="assets/img/home-img4.png" class="img-fluid" alt="">
-          <img src="assets/img/home-img5.png" class="img-fluid" alt="">
+  
         </div>
 
       </div>
